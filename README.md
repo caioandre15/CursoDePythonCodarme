@@ -7,7 +7,7 @@ Instalar o python versão 3.10.1
 
 #### 02. O que é python
 
-Podemos nos refere a três conceitos:
+Podemos nos referir a três conceitos:
 1)Linguagem de programação //Código em si
 2)Código-fonte (.py) // Script em python
 3)Interpretador Python
