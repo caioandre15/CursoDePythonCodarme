@@ -8,9 +8,9 @@ Instalar o python versão 3.10.1
 #### 02. O que é python
 
 Podemos nos referir a três conceitos:
-1)Linguagem de programação //Código em si
-2)Código-fonte (.py) // Script em python
-3)Interpretador Python
+1)Linguagem de programação //Código em si  
+2)Código-fonte (.py) // Script em python  
+3)Interpretador Python  
 
 #### 03. Configurando o VSCode
 1) Instalar VSCode  
