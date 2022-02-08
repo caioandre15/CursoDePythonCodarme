@@ -1,18 +1,18 @@
 # Curso de Python Codar.Me
 
-###Modulo 01 - Resumo
+### Modulo 01 - Resumo
 
-####01. Instalação do Python.
+#### 01. Instalação do Python.
 Instalar o python versão 3.10.1
 
-####02. O que é python
+#### 02. O que é python
 
 Podemos nos refere a três conceitos:
 1)Linguagem de programação //Código em si
 2)Código-fonte (.py) // Script em python
 3)Interpretador Python
 
-####03. Configurando o VSCode
+#### 03. Configurando o VSCode
 1) Instalar VSCode
 2) Instalar a extensão python
 3) Alterando para o interpretador python
