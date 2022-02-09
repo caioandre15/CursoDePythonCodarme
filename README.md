@@ -22,3 +22,16 @@ Podemos nos referir a três conceitos:
 4.1) Entrar no diretório do arquivo (.py) e depois rodar o comando "code ."  
 4.2) Este comando irá abrir o vscode já na pasta com o arquivo (.py).  
 
+### Módulo 02 - Resumo
+Comando:
+```
+type("Texto") // retorna o tipo da variável.
+```
+
+### Módulo 03 - Resumo
+#### Operadores Aritméticos
+Principais operadores são (*), (/), (+), (-). 
+Em uma divião na versão 3 do pytho o operados (/) realiza a divisão entre dois números,  
+sempre retornando um float. Para realizar um opereção que retorne um número inteiro  
+devemos utilizar o operador (//).
+
