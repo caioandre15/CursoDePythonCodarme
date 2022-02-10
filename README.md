@@ -38,4 +38,11 @@ sempre retornando um float. Para realizar um opereção que retorne um número i
 devemos utilizar o operador (//).  
 Também temos o operador (**) de exponenciação e o opedaror módulo (%) que retorna o resto da divisão. 
 ```
+#### Operadores Relacionais
+```
+Os operadores relacionais retornão um valor booleano. 
+(==) Comparação
+(!=) Diferenciação
+(>),(<),(>=),(<=)
+```
 
