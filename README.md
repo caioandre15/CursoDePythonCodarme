@@ -23,13 +23,13 @@ Podemos nos referir a três conceitos:
 4.1) Entrar no diretório do arquivo (.py) e depois rodar o comando "code ."  
 4.2) Este comando irá abrir o vscode já na pasta com o arquivo (.py).  
 
-### Módulo 02
+### Módulo 03
 Comando:
 ```
 type("Texto") // retorna o tipo da variável.
 ```
 
-### Módulo 03
+### Módulo 04
 #### Operadores Aritméticos
 ```
 Principais operadores são (*), (/), (+), (-). 
@@ -58,5 +58,22 @@ input("Digite: ")
 (\n) pula linha
 int("texto") realiza a converão de uma string para um número inteiro
 ```
+
+### Módulo 05
+Condicional:
+```
+if idade == 18:
+    print("Adulto")
+elif idade >= 12:
+    print("Adolescente")
+else:
+    print("Criança")
+```
+
+
+
+
+
+
 
 
