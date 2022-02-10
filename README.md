@@ -1,6 +1,7 @@
 # Curso de Python Codar.Me
 
-### Modulo 01 - Resumo
+## Resumos dos Módulos  
+### Modulo 01
 
 #### 01. Instalação do Python.
 Instalar o python versão 3.10.1
@@ -21,4 +22,20 @@ Podemos nos referir a três conceitos:
 4) View>Command Palette>Digitar"Path">Selecionar a cópia do arquivo  
 4.1) Entrar no diretório do arquivo (.py) e depois rodar o comando "code ."  
 4.2) Este comando irá abrir o vscode já na pasta com o arquivo (.py).  
+
+### Módulo 02
+Comando:
+```
+type("Texto") // retorna o tipo da variável.
+```
+
+### Módulo 03
+#### Operadores Aritméticos
+```
+Principais operadores são (*), (/), (+), (-). 
+Em uma divião na versão 3 do python o operados (/) realiza a divisão entre dois números,  
+sempre retornando um float. Para realizar um opereção que retorne um número inteiro  
+devemos utilizar o operador (//).  
+Também temos o operador (**) de exponenciação e o opedaror módulo (%) que retorna o resto da divisão. 
+```
 
