@@ -31,8 +31,11 @@ type("Texto") // retorna o tipo da variável.
 
 ### Módulo 03
 #### Operadores Aritméticos
+```
 Principais operadores são (*), (/), (+), (-). 
-Em uma divião na versão 3 do pytho o operados (/) realiza a divisão entre dois números,  
+Em uma divião na versão 3 do python o operados (/) realiza a divisão entre dois números,  
 sempre retornando um float. Para realizar um opereção que retorne um número inteiro  
-devemos utilizar o operador (//).
+devemos utilizar o operador (//).  
+Também temos o operador (**) de exponenciação e o opedaror módulo (%) que retorna o resto da divisão. 
+```
 
