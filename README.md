@@ -45,4 +45,11 @@ Os operadores relacionais retornão um valor booleano.
 (!=) Diferenciação
 (>),(<),(>=),(<=)
 ```
+#### Operadores Lógicos
+```
+Temos três tipos de operadores lógicos, são eles:
+- NOT
+- AND
+- OR
+```
 
