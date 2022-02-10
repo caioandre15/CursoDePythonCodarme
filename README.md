@@ -52,4 +52,11 @@ Temos três tipos de operadores lógicos, são eles:
 - AND
 - OR
 ```
+#### Recebendo Input do usuário
+```
+input("Digite: ")
+(\n) pula linha
+int("texto") realiza a converão de uma string para um número inteiro
+```
+
 
