@@ -60,15 +60,8 @@ int("texto") realiza a converão de uma string para um número inteiro
 ```
 
 ### Módulo 05
-Condicional:
-```
-if idade == 18:
-    print("Adulto")
-elif idade >= 12:
-    print("Adolescente")
-else:
-    print("Criança")
-```
+Condicional, Laço de repetição são utilizados para controlar o fluxo do código.
+
 
 
 
