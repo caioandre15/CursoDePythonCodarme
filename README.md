@@ -60,7 +60,7 @@ int("texto") realiza a converão de uma string para um número inteiro
 ```
 
 ### Módulo 05
-Condicional, Laço de repetição são utilizados para controlar o fluxo do código.
+Condicional e Laços de repetição são utilizados para controlar o fluxo do código.
 
 
 
