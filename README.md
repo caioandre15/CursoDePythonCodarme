@@ -22,6 +22,9 @@ Podemos nos referir a três conceitos:
 4) View>Command Palette>Digitar"Path">Selecionar a cópia do arquivo  
 4.1) Entrar no diretório do arquivo (.py) e depois rodar o comando "code ."  
 4.2) Este comando irá abrir o vscode já na pasta com o arquivo (.py).  
+5) Abrir o modo interativo do python:
+5.1) Abrir um novo terminal e digitar Python3.
+5.2)  Atalho Command Palette - Ctrl + Shift + P e depois digitar "REPL"
 
 ### Módulo 03
 Comando:
