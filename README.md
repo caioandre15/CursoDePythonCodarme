@@ -22,6 +22,9 @@ Podemos nos referir a três conceitos:
 4) View>Command Palette>Digitar"Path">Selecionar a cópia do arquivo  
 4.1) Entrar no diretório do arquivo (.py) e depois rodar o comando "code ."  
 4.2) Este comando irá abrir o vscode já na pasta com o arquivo (.py).  
+5) Abrir o modo interativo do python:
+5.1) Abrir um novo terminal e digitar Python3.  
+5.2)  Atalho Command Palette - Ctrl + Shift + P e depois digitar "REPL"  
 
 ### Módulo 03
 Comando:
@@ -33,7 +36,7 @@ type("Texto") // retorna o tipo da variável.
 #### Operadores Aritméticos
 ```
 Principais operadores são (*), (/), (+), (-). 
-Em uma divião na versão 3 do python o operados (/) realiza a divisão entre dois números,  
+Em uma divisão na versão 3 do python o operados (/) realiza a divisão entre dois números,  
 sempre retornando um float. Para realizar um opereção que retorne um número inteiro  
 devemos utilizar o operador (//).  
 Também temos o operador (**) de exponenciação e o opedaror módulo (%) que retorna o resto da divisão. 
