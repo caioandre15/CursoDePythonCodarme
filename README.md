@@ -2,7 +2,7 @@
 
 ## importação de bibliotecas:
 ```
-import os //biblioteca para acessar comandos do sistema operacional.
+import os // biblioteca para acessar comandos do sistema operacional.
 Ex: os.system('cls') or None // Limpa o prompt de comando.
 ```
 
