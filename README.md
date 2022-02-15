@@ -64,6 +64,22 @@ int("texto") realiza a converão de uma string para um número inteiro
 
 ### Módulo 05
 Condicional e Laços de repetição são utilizados para controlar o fluxo do código.
+```
+# Exemplo de Condicional:
+if [condição]:
+   print()
+elif [condição]:
+   print()
+else:
+   print()
+
+# Exemplo de Laço de repetição
+x = valor
+while [condição]:
+    print()
+    x += 1
+```
+
 
 
 
