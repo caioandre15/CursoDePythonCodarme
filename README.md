@@ -88,6 +88,24 @@ while [condição]:
 
 ### Módulo 06 - Estrutura de Dados
 
+Algumas das principais estruturas de dados do Python são:
+```
+Listas ( list ): [1, 2, 3]
+Tuplas ( tuple ): (1, 2, 3)
+Conjuntos ( set ): {1, 2, 3}
+Dicionários ( dict ): {"a": 1, "b": 2, "c": 3}
+```
+#### Listas
+Comandos:
+```
+lista.append(valor) # Adiona um valor/objeto ao final da lista
+lista.pop() # Remove por padão o último elemento da lista
+lista.sort() # Ordena os valores da lista (Crescente)
+lista.sort(reverse=True) # Ordena os valores da lista (Decrescente)
+lista.insert(0, 8) # Insere um valor/objeto no indice indicado da lista
+lista.pop(0) # Remove o valor/objeto do indíce 0
+```
+
 
 
 
