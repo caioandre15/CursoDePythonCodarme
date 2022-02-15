@@ -96,14 +96,28 @@ Conjuntos ( set ): {1, 2, 3}
 Dicionários ( dict ): {"a": 1, "b": 2, "c": 3}
 ```
 #### Listas
+Comumente utilizadas para armazenar valores. Ex: notas.
+As listas são criadas utilizando colchetes []
 Comandos:
 ```
+Ex: notas = [8.5, 10, 7.98]
 lista.append(valor) # Adiciona um valor/objeto ao final da lista
 lista.pop() # Remove por padrão o último elemento da lista
 lista.sort() # Ordena os valores da lista (Crescente)
 lista.sort(reverse=True) # Ordena os valores da lista (Decrescente)
 lista.insert(0, 8) # Insere um valor/objeto no indice indicado da lista
 lista.pop(0) # Remove o valor/objeto do indíce 0
+```
+
+#### Tuplas
+Comumente utilizadas para armazenar objetos. Ex: Pessoa.
+As tuplas são criadas utilizando parênteses ()
+Tuplas são imutáveis não permitem atribuição após serem criadas.
+Comandos:
+```
+Ex: pessoa = ("João", 22, True)
+nome, idade, admin = pessoa # Desempacotamento de tuplas
+print(nome, idade, admin)
 ```
 
 
