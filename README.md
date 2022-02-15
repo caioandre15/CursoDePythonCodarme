@@ -1,6 +1,6 @@
 # Curso de Python Codar.Me
 
-## importação de bibliotecas:
+## Importação de bibliotecas:
 ```
 import os // biblioteca para acessar comandos do sistema operacional.
 Ex: os.system('cls') or None // Limpa o prompt de comando.
