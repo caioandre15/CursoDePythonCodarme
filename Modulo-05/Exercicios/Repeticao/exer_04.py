@@ -16,7 +16,7 @@ while resp == "s":
             print("O número digitado é maior do que o número secreto.")
             i += 1
         elif tentativa < numero:
-            print("O número digitado é menor do que o número secreto..")
+            print("O número digitado é menor do que o número secreto.")
             i += 1
         elif tentativa == numero:
             print("Você acertou o número secreto, parabéns!!")
