@@ -98,8 +98,8 @@ Dicionários ( dict ): {"a": 1, "b": 2, "c": 3}
 #### Listas
 Comandos:
 ```
-lista.append(valor) # Adiona um valor/objeto ao final da lista
-lista.pop() # Remove por padão o último elemento da lista
+lista.append(valor) # Adiciona um valor/objeto ao final da lista
+lista.pop() # Remove por padrão o último elemento da lista
 lista.sort() # Ordena os valores da lista (Crescente)
 lista.sort(reverse=True) # Ordena os valores da lista (Decrescente)
 lista.insert(0, 8) # Insere um valor/objeto no indice indicado da lista
