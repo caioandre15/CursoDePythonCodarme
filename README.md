@@ -1,19 +1,18 @@
 # Curso de Python Codar.Me
 
+## Importação de bibliotecas:
+```
+import os // biblioteca para acessar comandos do sistema operacional.
+Ex: os.system('cls') or None // Limpa o prompt de comando.
+```
+
 ## Resumos dos Módulos  
-### Modulo 01
+### Modulo 01 e 02 - Configurações de ambiente
 
 #### 01. Instalação do Python.
 Instalar o python versão 3.10.1
 
-#### 02. O que é python
-
-Podemos nos referir a três conceitos:  
-1) Linguagem de programação //Código em si  
-2) Código-fonte (.py) // Script em python  
-3) Interpretador Python  
-
-#### 03. Configurando o VSCode
+#### 02. Configurando o VSCode
 1) Instalar VSCode  
 2) Instalar a extensão python  
 3) Alterando para o interpretador python  
@@ -26,13 +25,20 @@ Podemos nos referir a três conceitos:
 5.1) Abrir um novo terminal e digitar Python3.  
 5.2)  Atalho Command Palette - Ctrl + Shift + P e depois digitar "REPL"  
 
-### Módulo 03
+### Módulo 03 - Introdução ao python
+#### 01. O que é python
+
+Podemos nos referir a três conceitos:  
+1) Linguagem de programação //Código em si  
+2) Código-fonte (.py) // Script em python  
+3) Interpretador Python  
+
 Comando:
 ```
 type("Texto") // retorna o tipo da variável.
 ```
 
-### Módulo 04
+### Módulo 04 - Operações no python
 #### Operadores Aritméticos
 ```
 Principais operadores são (*), (/), (+), (-). 
@@ -62,8 +68,26 @@ input("Digite: ")
 int("texto") realiza a converão de uma string para um número inteiro
 ```
 
-### Módulo 05
+### Módulo 05 - Controle de fluxo
 Condicional e Laços de repetição são utilizados para controlar o fluxo do código.
+```
+# Exemplo de Condicional:
+if [condição]:
+   print()
+elif [condição]:
+   print()
+else:
+   print()
+
+# Exemplo de Laço de repetição
+x = valor
+while [condição]:
+    print()
+    x += 1
+```
+
+### Módulo 06 - Estrutura de Dados
+
 
 
 
