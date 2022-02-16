@@ -135,6 +135,19 @@ Ex: usuarios = {"alice", "bob"}
 - difference ou -
 ```
 
+#### Dicionários
+Dicionários são estruturas que armazenam pares de chave-valor.
+Comandos:
+```
+# {key: value}
+Ex: pessoa = {
+      "nome": "Alice",
+      "idade": 27,
+      "admin": False
+    }
+print(pessoa["nome"]) # é utilizado [] para acessar os campos do objeto.
+```
+
 
 
 
