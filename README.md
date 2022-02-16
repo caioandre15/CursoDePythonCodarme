@@ -120,10 +120,10 @@ nome, idade, admin = pessoa # "unpacking" - Desempacotamento de tuplas
 print(nome, idade, admin)
 ```
 #### Conjuntos Set
-- Não são ordenados.
-- Não permitem elementos repetidos.
-- Como não permitem duplicados podemos utilizar esta restrição para criar um conjunto
-  a partir de um lista com elementos duplicados. Assim, conseguimos remover dados duplicados.
+Não são ordenados.  
+Não permitem elementos repetidos.  
+Como não permitem duplicados podemos utilizar esta restrição para criar um conjunto
+a partir de um lista com elementos duplicados. Assim, conseguimos remover dados duplicados.
 Comandos:
 ```
 Ex: usuarios = {"alice", "bob"}
