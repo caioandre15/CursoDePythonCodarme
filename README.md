@@ -116,9 +116,38 @@ Tuplas são imutáveis não permitem atribuição após serem criadas.
 Comandos:
 ```
 Ex: pessoa = ("João", 22, True)
-nome, idade, admin = pessoa # Desempacotamento de tuplas
+nome, idade, admin = pessoa # "unpacking" - Desempacotamento de tuplas
 print(nome, idade, admin)
 ```
+#### Conjuntos Set
+Não são ordenados.  
+Não permitem elementos repetidos.  
+Como não permitem duplicados podemos utilizar esta restrição para criar um conjunto
+a partir de um lista com elementos duplicados. Assim, conseguimos remover dados duplicados.
+Comandos:
+```
+Ex: usuarios = {"alice", "bob"}
+    usuarios_2 = set(["alice","bob"])
+- set([])
+- add()
+- union ou | 
+- intersection &
+- difference ou -
+```
+
+#### Dicionários
+Dicionários são estruturas que armazenam pares de chave-valor.
+Comandos:
+```
+# {key: value}
+Ex: pessoa = {
+      "nome": "Alice",
+      "idade": 27,
+      "admin": False
+    }
+print(pessoa["nome"]) # é utilizado [] para acessar os campos do objeto.
+```
+
 
 
 
