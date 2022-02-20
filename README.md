@@ -146,6 +146,21 @@ Ex: pessoa = {
       "admin": False
     }
 print(pessoa["nome"]) # é utilizado [] para acessar os campos do objeto.
+
+# dict.items()
+Ex:
+for key, value in lista.items():
+   print(key, value)
+
+# dict.keys()
+Ex:
+for key in lista.keys()
+   print(key)
+   
+# dict.values()
+Ex:
+for value in lista.values()
+   print(value)
 ```
 
 
