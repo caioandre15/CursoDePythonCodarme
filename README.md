@@ -163,6 +163,32 @@ for value in lista.values()
    print(value)
 ```
 
+### Módulo 07 - Funções
+
+São blocos de código isolados que podem ser chamados para realizar alguma ação.  
+Como declarar uma função?
+```
+def f(x):
+    return x
+```
+Parâmetro vs. argumento  
+Parâmetro é a variavel declarada na função.  
+Argumento é o valor passado no parâmetro.  
+keywords arguments - São argumentos nomeados.  
+É interessante utilizar este recurso para facilitar o entendimento dos argumentos passados na função.  
+
+Exemplo de keywords arguments:  
+```
+def dar_boas_vindas(nome, sobrenome, nome_do_curso):
+    print("Olá,", nome, sobrenome)
+    print("Bem-vindo ao curso de", nome_do_curso)
+
+dar_boas_vindas(nome="João", sobrenome="Silva", nome_do_curso="Python")
+```
+
+
+
+
 
 
 
