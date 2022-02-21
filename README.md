@@ -188,7 +188,28 @@ def dar_boas_vindas(nome, sobrenome, nome_do_curso):
     print("Bem-vindo ao curso de", nome_do_curso)
 
 dar_boas_vindas(nome="João", sobrenome="Silva", nome_do_curso="Python")
+
+*OBS: Argumentos nomeados, sempre devem vir depois de argumentos não nomeados.
 ```
+
+Uma função sempre possui um retorno, mesmo que o mesmo não esteja declarado.
+Neste caso o retorno padrão é igual a None.
+
+Exemplo de parâmetro com valor padrão:
+```
+def calcular_conta(consumo, taxa_servico=0.1, desconto_fidelidade=5):
+    servico = consumo * taxa_servico
+    desconto = consumo * desconto_fidelidade
+    valor = (consumo + servico) - desconto
+    return valor
+
+valor = calcular_conta(consumo=100, taxa_servico=0.1, desconto_fidelidade=0.05)
+print("O valor a ser pago é:", valor)
+
+*OBS: Parametros com valor, sempre devem vir depois de parâmetros sem valor padrão.
+```
+
+
 
 
 
