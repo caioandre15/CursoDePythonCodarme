@@ -36,6 +36,10 @@ Podemos nos referir a três conceitos:
 Comando:
 ```
 type("Texto") // retorna o tipo da variável.
+# Comentário de uma linha
+"""
+Bloco de comentários
+"""
 ```
 
 ### Módulo 04 - Operações no python
