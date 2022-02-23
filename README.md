@@ -212,9 +212,13 @@ print("O valor a ser pago é:", valor)
 ### Módulo 08 - Programação Orientada a Objetos
 
 #### Objetos imutáveis, valor e referência  
-Em python os valores atribuidos a uma variavel são imutáveis, é criado uma instância em memória  
-onde fica armazenado o valor da variavel. Portanto, a variavel aponta para a localização do espaço  
-em memória que por sua vez, contem o valor recebido pela variavel. (Conceito de valor e referência).
+Em python existem valores que podem ser atribuidos a uma variavel que são imutáveis. (Ex. um valor inteiro)  
+É criado uma instância em memória onde fica armazenado o valor da variavel. Portanto, a variavel aponta para  
+a localização do espaço em memória que por sua vez, contem o valor recebido pela variavel. (Conceito de valor e referência).
+
+#### Objetos Mutáveis
+São objetos que podem sofrer alteração ex: Listas, Conjuntos e precisamos tomar cuidado.  
+Esse objetos devem ser tratados com atenção, pois podem gerar inconsistências de dados.  
 
 
 
