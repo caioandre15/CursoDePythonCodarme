@@ -209,6 +209,12 @@ print("O valor a ser pago é:", valor)
 *OBS: Parametros com valor, sempre devem vir depois de parâmetros sem valor padrão.
 ```
 
+### Módulo 08 - Programação Orientada a Objetos
+
+#### Objetos imutáveis, valor e referência  
+Em python os valores atribuidos a uma variavel são imutáveis, é criado uma instância em memória  
+onde fica armazenado o valor da variavel. Portanto, a variavel aponta para a localização do espaço  
+em memória que por sua vez, contem o valor recebido pela variavel. (Conceito de valor e referência).
 
 
 
