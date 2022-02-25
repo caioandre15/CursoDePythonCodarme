@@ -223,8 +223,8 @@ Esse objetos devem ser tratados com atenção, pois podem gerar inconsistências
 ### Classes e objetos
 Definindo Classes:  
 Classes são estrutura de códigos em que conseguimos definir nossos próprios tipos (String, Float ...) e metódos.  
-Estado: representação dos dados que o objeto armazena.
-Comportamento: São os métodos que o objeto pode realizar.
+**Estado:** representação dos dados que o objeto armazena.  
+**Comportamento:** São os métodos que o objeto pode realizar.  
 ```
 d = {"a": 1}  # dicionário é o tipo e "d" é o objeto.
 d.keys() # método
