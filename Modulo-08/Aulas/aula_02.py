@@ -8,7 +8,7 @@
 # print("Ordenadas:", notas_ordenadas)
 # print("Originais:", notas_originais)
 
-# No exemplo abaix a Lista original não sofre alteração
+# No exemplo abaixo a Lista original não sofre alteração
 # Pois a ordenação é criada a partir de uma cópia da lista original
 # notas_originais = [8, 10, 7]
 # notas_ordenadas = sorted(notas_originais)
