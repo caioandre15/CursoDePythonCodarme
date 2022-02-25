@@ -211,7 +211,7 @@ print("O valor a ser pago é:", valor)
 
 ### Módulo 08 - Programação Orientada a Objetos
 
-#### Objetos imutáveis, valor e referência  
+#### Objetos Imutáveis, Valor e Referência  
 Em python existem valores que podem ser atribuidos a uma variavel que são imutáveis. (Ex. um valor inteiro)  
 É criado uma instância em memória onde fica armazenado o valor da variavel. Portanto, a variavel aponta para  
 a localização do espaço em memória que por sua vez, contem o valor recebido pela variavel. (Conceito de valor e referência).
@@ -219,6 +219,34 @@ a localização do espaço em memória que por sua vez, contem o valor recebido 
 #### Objetos Mutáveis
 São objetos que podem sofrer alteração ex: Listas, Conjuntos e precisamos tomar cuidado.  
 Esse objetos devem ser tratados com atenção, pois podem gerar inconsistências de dados.  
+
+### Classes e objetos
+Definindo Classes:  
+Classes são estrutura de códigos em que conseguimos definir nossos próprios tipos (String, Float ...) e metódos.  
+Estado: representação dos dados que o objeto armazena.
+Comportamento: São os métodos que o objeto pode realizar.
+```
+d = {"a": 1}  # dicionário é o tipo e "d" é o objeto.
+d.keys() # método
+```
+Criando uma classe:  
+```
+class Evento:
+    pass # Informa que é uma classe vazia (pass) ou (...).
+```
+Adicionando um método na classe:
+```
+class Evento:
+    def altera_nome_evento(self, novo_nome):
+        print("Alterando nome do evento")
+        self.nome = novo_nome
+```
+
+
+
+
+
+
 
 
 
