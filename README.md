@@ -234,12 +234,19 @@ Criando uma classe:
 class Evento:
     pass # Informa que é uma classe vazia (pass) ou (...).
 ```
-Adicionando um método na classe:
+Adicionando um método:
 ```
 class Evento:
     def altera_nome_evento(self, novo_nome):
         print("Alterando nome do evento")
         self.nome = novo_nome
+```
+Adicionado um construtor:
+```
+class Evento:
+    def __init__(self, nome):
+        self.nome = nome
+        self.local = "Brasil"
 ```
 
 
