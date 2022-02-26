@@ -234,6 +234,11 @@ Criando uma classe:
 class Evento:
     pass # Informa que é uma classe vazia (pass) ou (...).
 ```
+Adcionando um atributo de classe:
+```
+class Evento:
+    id = 1
+```
 Adicionando um método:
 ```
 class Evento:
@@ -247,6 +252,12 @@ class Evento:
     def __init__(self, nome):
         self.nome = nome
         self.local = "Brasil"
+
+# Construtor com um valor que não precisa ser preenchindo
+class Evento:
+    def __init__(self, nome, apelido=""):
+        self.nome = nome
+        self.apelido = apelido
 ```
 Definição de métodos de (Instância, Classes e Estáticos):
 ```
