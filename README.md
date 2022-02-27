@@ -275,6 +275,7 @@ class Evento:
 ```
 Herança e sobrescrita de metodos:
 ```
+# Herança - Evento online é uma especialização da classe Evento
 class Evento:
     def __init__(self, nome, local=""):
         self.nome = nome
@@ -286,6 +287,12 @@ class EventoOnline(Evento):
     def __init__(self, nome, _=""):
         local = f"https://tamarcado.com/eventos?id={EventoOnline.id}"
         super().__init__(nome, local)
+```
+Criação de Módulos - Organização de classes por arquivo
+Realizamos a importação dos arquivos .py para acessar as classes do projeto.
+```
+from evento import Evento
+# from nome_arquivo import nome_classe
 ```
 
 
