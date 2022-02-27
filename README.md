@@ -273,6 +273,20 @@ class Evento:
     def metodo_estatico():
         return "estático chamado"
 ```
+Herança e sobrescrita de metodos:
+```
+class Evento:
+    def __init__(self, nome, local=""):
+        self.nome = nome
+        self.local = local
+        self.id = Evento.id
+        Evento.id += 1
+
+class EventoOnline(Evento):
+    def __init__(self, nome, _=""):
+        local = f"https://tamarcado.com/eventos?id={EventoOnline.id}"
+        super().__init__(nome, local)
+```
 
 
 
