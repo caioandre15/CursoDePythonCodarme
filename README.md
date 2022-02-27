@@ -296,7 +296,29 @@ from evento import Evento
 ```
 
 
-### Módulo 09 - Protocolo Http (Client Servidor)
+### Módulo 09 - Protocolo HTTP (Client Servidor)
+Criando um servidor:
+````
+# Importação das classes (HTTPServer, BaseHTTPRequestHandler) da bibioteca padrão do Python (http.server):
+# BaseHTTPRequestHandler tem a missão de receber as requisições
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+# Criando uma classe que herda de BaseHTTPRequestHandler e implementa o metódo Get:
+class SimpleHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200) # Define o retorno do servidor como 200
+        self.send_header("Content-Type", "text/html; charset=UTF-8") # Define a codificação para UTF-8
+        self.send_header("Teste", "abc") # Adiciona um cabeçalho
+        self.end_headers() # Informa que não existem mais cabeçahos
+        self.wfile.write("Olá, mundo!".encode()) # Retorna uma mensagem para o cliente
+        # encode() Converte a string para binário
+
+# Contrutor por default espera receber o endereço e a porta.
+server = HTTPServer(('localhost', 8000), SimpleHandler) 
+# Faz com que o servidor fique ativo aguardando uma requisição
+server.serve_forever() 
+````
+
 
 
 
