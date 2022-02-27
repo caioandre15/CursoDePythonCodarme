@@ -1,4 +1,4 @@
-# Aula 07
+# Aula 08
 
 class Evento:
     id = 1 # Adicionando atributos de classe
