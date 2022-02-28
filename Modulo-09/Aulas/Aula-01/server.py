@@ -15,7 +15,8 @@ class SimpleHandler(BaseHTTPRequestHandler):
             <body>
                 <p>Testando nosso servidor HTTP!</p>
                 <p>Diretório: {self.path}</p>
-            </body
+            </body>
+        </html>
         """.encode()
         self.wfile.write(data)
 
