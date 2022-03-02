@@ -326,9 +326,9 @@ versões de pacotes instalados em cada projeto.
 
 Comandos: 
 ```
-Set P 
+Set Path 
 ```
-Exibe as variaveis de ambiente do usuários windowns.
+Exibe a variavel de ambiente Path (usuários windows).
 
 ````
 cd C:\Users\Caio\Desktop\CursoDePythonCodarme\venv\Scripts
