@@ -418,6 +418,21 @@ Podemos utilizar também o comando abaixo para executar o flask:
 app.run()
 ````
 
+Converte um objeto para um dicionário:
+Comando nativo do python
+````
+obj.__dict__
+````
+
+Jsonify:
+Utilizado para converter um objeto para JSON, também realiza as configurções dos Headers para o navegador:
+Ex: Content-Type: application/json
+````
+from flask import Flask, jsonify
+...
+return jsonify(eventos_dict)
+````
+
 
 
 
