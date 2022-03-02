@@ -319,8 +319,53 @@ server = HTTPServer(('localhost', 8000), SimpleHandler)
 server.serve_forever() 
 ````
 
+### Módulo 10 - Configurando um ambiente virtual
 
+Quando trabalhamos com python devemos criar um ambiente virtual para trabalhar com diferentes  
+versões de pacotes instalados em cada projeto. 
 
+Comandos: 
+```
+Set P 
+```
+Exibe as variaveis de ambiente do usuários windowns.
+
+````
+cd C:\Users\Caio\Desktop\CursoDePythonCodarme\venv\Scripts
+ls
+````
+Os dois comandos acima são realizados para verificarmos aonde está instaldo o nosso interpretador python.
+
+#### Criando um ambiente virtual
+
+No diretório do projeto, digite o comando abaixo:
+````
+python3 -m venv [nome do ambiente]
+````
+Para executar o comando acima é necessário estar no diretório do projeto:
+
+Depois, podemos configurar o interpretador padrão seguindo este caminho:
+Paleta de Comandos/Selecionar interpretador/ Selecionar o "venv"
+
+Para ativar pelo shell:
+CMD:
+````
+C:\\...  venv\Scripts\activate.bat
+````
+POWER SHELL
+````
+C:\\...  venv\Scripts\activate.ps1
+````
+Para desativar:
+````
+deactivate
+````
+
+Instalando depêndencias externas:
+````
+pip install flask
+pip install django 
+````
 
 
 
