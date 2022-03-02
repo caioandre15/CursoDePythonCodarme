@@ -368,6 +368,25 @@ pip install flask
 pip install django 
 ````
 
+### Módulo 11 - API HTTP com Flask
+
+Comandos:
+````
+flask run
+````
+Para executar o servidor.
+
+````
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/") # Mapeamento de rotas
+def index():
+    return "<h1>Flask configurado com sucesso!</h1>"
+````
+Criando um exemplo de servidor simples.
+
 
 
 
