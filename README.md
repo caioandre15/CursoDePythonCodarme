@@ -385,7 +385,40 @@ app = Flask(__name__)
 def index():
     return "<h1>Flask configurado com sucesso!</h1>"
 ````
-Criando um exemplo de servidor simples.
+Criando um exemplo de API simples.
+
+#### Variáveis de ambiente do Flask
+FLASK_APP Serve para apontar para o python qual aplicação será rodada dentro do framework do flask.
+Comando para setar um valor a variável FLASK_APP:
+````
+CMD: 
+> set FLASK_APP=main.py
+> flask run
+
+PowerShell:
+> $env:FLASK_APP = "main.py"
+> flask run
+
+***OBS: É necessário estar no diretório raiz do projeto para executar os comandos.
+````
+FLASK_ENV Serve para apontar qual o ambiente em que está sendo executado a aplicação:
+Comando para setar um valor a variável FLASK_ENV:
+````
+CMD: 
+> set FLASK_ENV=development
+> flask run
+
+PowerShell:
+> $env:FLASK_ENV = "development"
+> flask run
+***OBS: É necessário estar no diretório raiz do projeto para executar os comandos.
+````
+Podemos utilizar também o comando abaixo para executar o flask:
+````
+app.run()
+````
+
+
 
 
 
