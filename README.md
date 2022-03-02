@@ -362,6 +362,7 @@ deactivate
 ````
 
 Instalando depêndencias externas:
+PIP - Package Installer for Python
 ````
 pip install flask
 pip install django 
