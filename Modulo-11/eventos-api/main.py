@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from evento import Evento
 from evento_online import EventoOnline
+import json
 
 app = Flask(__name__)
 
@@ -17,11 +18,7 @@ def index():
 def listar_eventos():
     eventos_dict = []
     for ev in eventos:
-        eventos_dict.append({
-            "id": ev.id,
-            "nome": ev.nome,
-            "local": ev.local
-        })
+        eventos_dict.append(ev.__dict__)
     return jsonify(eventos_dict)
 
 app.run()

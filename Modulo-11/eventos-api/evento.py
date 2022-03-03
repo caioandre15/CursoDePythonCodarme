@@ -15,6 +15,9 @@ class Evento:
         print("Local do evento:", self.local)
         print("--------------------")
 
+    def toJSON(self):
+        return json.dumps(self.__dict__)
+
     def to_json(self):
         return json.dumps({
             "id": self.id,
