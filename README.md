@@ -433,6 +433,15 @@ from flask import Flask, jsonify
 return jsonify(eventos_dict)
 ````
 
+Adicionando um parametro do tipo inteiro na rota com Flask:
+````
+@app.route("/api/eventos/<int:id>/")
+def detalhar_evento(id):
+    for ev in eventos:
+        if ev.id == id:
+            return jsonify(ev.__dict__)
+````
+
 
 
 
