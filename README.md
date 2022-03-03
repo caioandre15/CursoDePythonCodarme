@@ -441,6 +441,32 @@ def detalhar_evento(id):
         if ev.id == id:
             return jsonify(ev.__dict__)
 ````
+Lançando uma exceção (abort, make_response e @app.errorhandler())
+
+Devemos importar as bibliotecas:
+````
+from flask import Flask, jsonify, abort, make_response
+````
+
+Exemplo de exceção com o status code 404 utilizando apenas o **abort**:
+````
+abort(404, "Evento não encontrado")
+````
+Exemplo de exceção com o status code 404 utilizando **make_response**:
+````
+data = {"erro": f"Não encontrei o evento com id: {id}"}
+return make_response(jsonify(data), 404)    
+````
+Exemplo de exceção com o status code 404 utilizando **@app.errorhandler(404)**:
+````
+@app.errorhandler(404)
+def nao_encontrado(erro):
+    # data = {"erro": str(erro)} 
+    return (jsonify(erro=str(erro)), 404)
+ 
+abort(404, f"Não encontrei o evento com id: {id}")
+````
+
 
 
 
