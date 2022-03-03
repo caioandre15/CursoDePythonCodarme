@@ -21,4 +21,9 @@ def listar_eventos():
         eventos_dict.append(ev.__dict__)
     return jsonify(eventos_dict)
 
-app.run()
+@app.route("/api/eventos/<int:id>/")
+def detalhar_evento(id):
+    for ev in eventos:
+        if ev.id == id:
+            return jsonify(ev.__dict__)
+
