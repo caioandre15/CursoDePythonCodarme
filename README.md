@@ -493,7 +493,20 @@ json.loads(json) = > dict
 ````
 
 Validações:
+Após realizar o parse dos campos da requisição recebida, precisamos aplicar validações,
+para nossa API contemple as regras de negócio. 
+````
+if not nome:
+        abort(400, "'nome' precisa ser informado!")
+````
 
+Adicionando o retorno do id do evento criado para o cliente e o direcionamento para a rota de detalhes (HATEOAS)
+````
+return {
+         "id": evento.id,
+         "url": f"/api/eventos/{evento.id}/"
+       }
+````
 
 
 
