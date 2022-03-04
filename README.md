@@ -4,6 +4,8 @@
 ```
 import os // biblioteca para acessar comandos do sistema operacional.
 Ex: os.system('cls') or None // Limpa o prompt de comando.
+import json // Para trabalhar com o formto JSON
+
 ```
 
 ## Resumos dos Módulos  
@@ -466,6 +468,31 @@ def nao_encontrado(erro):
  
 abort(404, f"Não encontrei o evento com id: {id}")
 ````
+
+Criando uma rota com o método POST:
+
+Devemos importar as bibliotecas request e json
+````
+from flask import Flask, jsonify, abort, make_response, request, json
+````
+
+Exemplo:
+````
+@app.route("/api/eventos/", methods=["POST"])
+def criar_evento():
+    data = json.loads(request.data)  # Converte de json para dicionário
+    nome = data.get("nome") # Realiza o parse do campo "nome" recebido na requisição
+    local = data.get("local")
+    return data
+````
+
+Conversões json:
+````
+json.dumps dict => json
+json.loads(json) = > dict
+````
+
+Validações:
 
 
 
