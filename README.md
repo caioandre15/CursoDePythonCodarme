@@ -511,13 +511,17 @@ return {
 
 ## Módulo 12 - Desenvolvimento Web com Django
 
-Instalando o Django
+Instalando o Django  
 ``
 pip install Django==4.0.2
 ``  
 Comando para criar um projeto Django:
 ````
-django-admin startproject [Nome do projeto]
+django-admin startproject [Nome do projeto] .
+````
+Comando para iniciar o servidor:
+````
+python manage.py runserver
 ````
 
 
