@@ -490,6 +490,7 @@ Conversões json:
 ````
 json.dumps dict => json
 json.loads(json) = > dict
+data = request.get_json()  
 ````
 
 Validações:
