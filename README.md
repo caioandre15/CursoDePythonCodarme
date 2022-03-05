@@ -524,6 +524,41 @@ Comando para iniciar o servidor:
 ````
 python manage.py runserver
 ````
+Comando para criar um aplicativo:
+````
+django-admin startapp [nome do app]
+````
+Após criar o app é necessário configurar as urlpatterns do app.
+Assim o projeto fica organizado e utilizamos uma boa prática.
+
+Passo a passo:
+Criar um arquivo urls.py no diretorio do app;
+Ex:
+````
+from django.urls import URLPattern
+from django.urls import path
+from agenda.views import index
+
+urlpatterns = [
+    path("", index)
+]
+````
+Adicionar as configurações abaixo no arquivo urls.py do diretório raiz do projeto:
+````
+from django.urls.conf import include
+from django.contrib import admin
+from django.urls import path
+
+from agenda.urls import urlpatterns as agenda_urls
+from agenda.views import index
+
+urlpatterns = [
+    # path('admin/', admin.site.urls),
+    path("", include(agenda_urls))
+]
+````
+
+
 
 
 
