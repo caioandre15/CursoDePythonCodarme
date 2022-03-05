@@ -54,12 +54,65 @@ def nao_encontrado(erro):
     # data = {"erro": str(erro)}
     return (jsonify(erro=str(erro)), 404)
 
-@app.route("/api/eventos/<int:id>/")
-def detalhar_evento(id):
+def get_evento_or_404(id):
     for ev in eventos:
         if ev.id == id:
-            return jsonify(ev.__dict__)
-    abort(404, f"Não encontrei o evento com id: {id}")
+            return ev
+    abort("404", "Evento não encontrado")
+
+
+@app.route("/api/eventos/<int:id>/")
+def detalhar_evento(id):
+    ev = get_evento_or_404(id)
+    return jsonify(ev.__dict__)
+
+@app.route("/api/eventos/<int:id>/", methods=["DELETE"])
+def deletar_evento(id):
+    ev = get_evento_or_404(id)
+    eventos.remove(ev)
+    return jsonify(id=id)
+
+@app.route("/api/eventos/<int:id>/", methods=["PUT"])
+def editar_evento(id):
+    
+    # Parsing
+    data = request.get_json()  
+    nome = data.get("nome")
+    local = data.get("local")
+
+    # Validação
+    if not nome:
+        abort(400, "'nome' precisa ser informado!")
+    if not local:
+        abort(400, "'local' precisa ser informado!")
+
+    ev = get_evento_or_404(id)
+    ev.nome = nome
+    ev.local = local
+        
+    return jsonify(ev.__dict__)
+
+@app.route("/api/eventos/<int:id>/", methods=["PATCH"])
+def editar_evento_parcial(id):
+
+    # Parsing
+    data = request.get_json()  
+    
+    ev = get_evento_or_404(id)
+    # Validação
+    if "nome" in data.keys():
+        nome = data.get("nome")
+        if not nome:
+            abort(400, "'nome' precisa ser informado!")
+        ev.nome = nome
+    if "local" in data.keys():
+        local = data.get("local")
+        if not local:
+            abort(400, "'local' precisa ser informado!")
+        ev.local = local
+        
+    return jsonify(ev.__dict__)
+
     # abort(404, "Evento não encontrado")
     # data = {"erro": f"Não encontrei o evento com id: {id}"}
     # return make_response(jsonify(data), 404)
