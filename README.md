@@ -558,6 +558,11 @@ urlpatterns = [
 ]
 ````
 
+### Criando Classes:
+
+Dendro do diretório de sua applicação em django temos um arquivo chamado models.py para criamos as nossas classes.
+
+
 
 
 
