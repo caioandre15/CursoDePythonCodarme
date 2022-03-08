@@ -570,6 +570,64 @@ Criando Templates HTML:
 Devemos criar uma pasta chamada templates dendro do diretório de sua aplicação. Depois, criar outra pasta dentro de templates
 com o nome da aplicação. Nesta última pasta adicionamos o arquivo .html.
 
+Ex. Django-Template HTML:
+````
+<html>
+    <h1>Evento: {{evento.nome}}</h1>
+    <p>Categoria: {{evento.categoria}}</p>
+    <p>Local: {{evento.local}}</p>
+    <p>Link: {{evento.link}}</p>
+</html>
+````
+É utilizado {{}} duas chaves para interpolar os valores das variáveis.
+
+Utilizando o template loader para carregar a view:
+
+Importação da biblioteca:
+````
+from django.template import loader
+````
+
+Exemplo de carregamento de template e injeção de valores:
+
+Importação da biblioteca:
+````
+def exibir_evento(request):
+    evento = eventos[1]
+    template = loader.get_template("agenda/exibir_eventos.html")
+    rendered_template = template.render(context={"evento": evento}, request=request)
+    return HttpResponse(rendered_template)
+````
+
+Utilizando a versão reduzida utilizando o django.shortcuts:
+
+````
+from django.shortcuts import render
+````
+
+````
+def exibir_evento(request):
+    evento = eventos[1]
+    return render(request=request, context={"evento": evento}, template_name="agenda/exibir_eventos.html")
+````
+
+Importante: 
+Para que a aplicação seja considerada como instalada, devemos adicionar após a última linha 
+do diretório principal do projeto no arquivo settings.py a referências das configurações de 
+nossa aplicação.
+Ex:
+````
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'agenda.apps.AgendaConfig'
+]
+````
+
 
 
 
