@@ -7,6 +7,9 @@ Ex: os.system('cls') or None // Limpa o prompt de comando.
 import json // Para trabalhar com o formto JSON
 
 ```
+## Extensões do VSCode:
+
+Django https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django
 
 ## Resumos dos Módulos  
 ### Modulo 01 e 02 - Configurações de ambiente
@@ -558,7 +561,7 @@ urlpatterns = [
 ]
 ````
 
-### Criando Classes:
+Criando Classes:
 
 Dendro do diretório de sua applicação em django temos um arquivo chamado models.py para criamos as nossas classes.
 
