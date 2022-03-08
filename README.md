@@ -339,7 +339,7 @@ Exibe a variavel de ambiente Path (usuários windows).
 cd C:\Users\Caio\Desktop\CursoDePythonCodarme\venv\Scripts
 ls
 ````
-Os dois comandos acima são realizados para verificarmos aonde está instaldo o nosso interpretador python.
+Os dois comandos acima são realizados para verificarmos aonde está instalado o nosso interpretador python.
 
 #### Criando um ambiente virtual
 
@@ -662,6 +662,26 @@ class Evento:
     local = models.CharField(max_length=256, blank=True)
     link = models.CharField(max_length=256, blank=True)
 ````
+
+Comando para criar as Migrations:
+
+````
+python manage.py makemigrations
+````
+
+Comando para aplicar as Migrations:
+
+````
+python manage.py migrate
+````
+
+Comando para abrir um client para sqlite:
+
+````
+python manage.py dbshell
+````
+
+
 
 
 
