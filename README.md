@@ -681,6 +681,13 @@ Comando para abrir um client para sqlite:
 python manage.py dbshell
 ````
 
+Comandos SQlite:
+
+````
+.table - Exibe todas as tabelas
+.quit - sai do teminal
+````
+
 
 
 
