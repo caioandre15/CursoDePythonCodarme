@@ -563,7 +563,12 @@ urlpatterns = [
 
 Criando Classes:
 
-Dendro do diretório de sua applicação em django temos um arquivo chamado models.py para criamos as nossas classes.
+Dendro do diretório de sua aplicação em django temos um arquivo chamado models.py para criamos as nossas classes.
+
+Criando Templates HTML:
+
+Devemos criar uma pasta chamada templates dendro do diretório de sua aplicação. Depois, criar outra pasta dentro de templates
+com o nome da aplicação. Nesta última pasta adicionamos o arquivo .html.
 
 
 
