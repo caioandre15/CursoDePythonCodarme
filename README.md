@@ -727,6 +727,20 @@ Evento.objects.filter(categoria__nome="Backend") #navegando entre as relações 
 
 ````
 
+Django Admin
+
+Descomentar path admin:
+````
+urlpatterns = [
+    # path('admin/', admin.site.urls),
+    path("", include(agenda_urls))
+]
+````
+
+Comando para criar um super usuário:
+````
+python manage.py createsuperuser
+````
 
 
 
