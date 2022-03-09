@@ -742,6 +742,24 @@ Comando para criar um super usuário:
 python manage.py createsuperuser
 ````
 
+Registrando modelos no painel administrativo do Django:
+No diretótio da aplicação devemos alterar o arquivo admin.py
+````
+from django.contrib import admin
+
+from agenda.models import Evento, Categoria
+
+# Register your models here.
+admin.site.register(Evento)
+admin.site.register(Categoria)
+````
+
+Sobestrevendo o metódo __str__ para melhorar a visualização:
+````
+def __str__(models.Model):
+    return f"{self.nome} <{self.id}>"
+````
+
 
 
 
