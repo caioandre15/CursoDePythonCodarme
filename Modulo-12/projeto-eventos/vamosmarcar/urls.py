@@ -21,6 +21,6 @@ from agenda.urls import urlpatterns as agenda_urls
 from agenda.views import index
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path("", include(agenda_urls))
 ]
