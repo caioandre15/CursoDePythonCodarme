@@ -707,10 +707,18 @@ Criando instância e persistência de dados
 >Categoria.objects.create(nome="Backend")
 
 Busca todos os elementos de uma classe ou tabela no banco de dados:
-Categoria.objects.all()
+>Categoria.objects.all()
 
 Criando uma categoria e armazenando em uma variavel
-cat = Categoria.objects.create(nome="Frontend")
+>cat = Categoria.objects.create(nome="Frontend")
+
+Outra Forma de Criar instância e persistir de dados
+>categoria_3 = Categoria(nome="Fullstack")
+categoria_3.save()
+
+Realizando filtro
+Categoria.objects.filter(nome="Backend")
+
 ````
 
 
