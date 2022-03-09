@@ -754,36 +754,24 @@ admin.site.register(Evento)
 admin.site.register(Categoria)
 ````
 
-Sobestrevendo o metódo __str__ para melhorar a visualização:
+Sobrescrevendo o metódo __str__ para melhorar a visualização:
 ````
 def __str__(models.Model):
     return f"{self.nome} <{self.id}>"
 ````
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Iterando os objetos no Django Template html:
+````
+{% for evento in eventos %}
+    <tr>
+        <td>{{evento.nome}}</td>
+        <td>{{evento.categoria.nome}}</td>
+        <td>{% firstof evento.local evento.link %}</td>
+        <td>{{ evento.data }}</td>
+        <td><a href="exibir_evento.html">Ver detalhes</a></td>
+    </tr>
+{% endfor %}
+````
 
 
 
