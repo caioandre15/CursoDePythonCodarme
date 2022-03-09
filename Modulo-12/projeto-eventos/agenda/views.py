@@ -2,10 +2,20 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
 
+from agenda.models import Evento
+
 # Create your views here.
 
-def index(request):
-    return HttpResponse("Olá Mundo!")
+def listar_eventos(request):
+    # Buscar os nossos eventos criados no banco
+    # Exibir um template listando esses eventos
+    eventos = Evento.objects.all()
+    return render(
+        request=request, 
+        context={"eventos": eventos}, 
+        template_name="agenda/listar_eventos.html"
+    )
+    
 
 def exibir_evento(request):
     evento = {

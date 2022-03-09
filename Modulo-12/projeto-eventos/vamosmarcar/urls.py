@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from agenda.urls import urlpatterns as agenda_urls
-from agenda.views import index
+from agenda.views import listar_eventos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
