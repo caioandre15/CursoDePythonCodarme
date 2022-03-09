@@ -686,12 +686,35 @@ Comandos SQlite:
 ````
 .table - Exibe todas as tabelas
 .quit - sai do teminal
+.header on - Exibe cabeçalhos nas consultas
 ````
 
 Comando para abrir um Shell Python no Projeto:
 ````
 python manage.py shell
 ````
+
+
+Abrindo shell interativo com o projeto
+````
+python manage.py shell
+````
+Comandos Executados:
+````
+>from agenda.models import Evento, Categoria
+
+Criando instância e persistência de dados
+>Categoria.objects.create(nome="Backend")
+
+Busca todos os elementos de uma classe ou tabela no banco de dados:
+Categoria.objects.all()
+
+Criando uma categoria e armazenando em uma variavel
+cat = Categoria.objects.create(nome="Frontend")
+````
+
+
+
 
 
 
