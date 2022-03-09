@@ -688,6 +688,11 @@ Comandos SQlite:
 .quit - sai do teminal
 ````
 
+Comando para abrir um Shell Python no Projeto:
+````
+python manage.py shell
+````
+
 
 
 
