@@ -687,6 +687,7 @@ Comandos SQlite:
 .table - Exibe todas as tabelas
 .quit - sai do teminal
 .header on - Exibe cabeçalhos nas consultas
+.nullvalue NULL
 ````
 
 Abrindo shell interativo com o projeto
