@@ -689,12 +689,6 @@ Comandos SQlite:
 .header on - Exibe cabeçalhos nas consultas
 ````
 
-Comando para abrir um Shell Python no Projeto:
-````
-python manage.py shell
-````
-
-
 Abrindo shell interativo com o projeto
 ````
 python manage.py shell
@@ -714,10 +708,22 @@ Criando uma categoria e armazenando em uma variavel
 
 Outra Forma de Criar instância e persistir de dados
 >categoria_3 = Categoria(nome="Fullstack")
-categoria_3.save()
+>categoria_3.save()
 
 Realizando filtro
-Categoria.objects.filter(nome="Backend")
+>Categoria.objects.filter(nome="Backend")
+
+Criando um evento:
+>categoria = Categoria.objects.filter(nome="Backend")
+>evento = Evento(nome="Aula de APIs", categoria=categoria)
+>evento.save()
+
+Navegando entre os objetos
+>evento.categoria.nome
+
+Realizando filtro:
+Evento.objects.filter(categoria=categoria)
+Evento.objects.filter(categoria__nome="Backend") #navegando entre as relações de tabelas
 
 ````
 
