@@ -839,6 +839,18 @@ Exemplo de utilização em um template django:
 <td><a href="{% url 'exibir_evento' evento.id %}">Ver detalhes</a></td>
 ````
 
+Implementando uma view com HttpResponseRedirect:
+Importante a utilização deste recurso para que o cliente não realize uma operação 
+indevida ao atualizar a página do navegador.
+````
+def participar_evento(request):
+    evento_id = request.POST.get("evento_id")
+    evento = get_object_or_404(Evento, id=evento_id)
+    evento.participantes += 1
+    evento.save()
+    
+    return HttpResponseRedirect(f"/eventos/{evento.id}/")
+````
 
 
 
