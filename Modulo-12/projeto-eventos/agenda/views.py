@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from datetime import date
 
@@ -18,13 +18,14 @@ def listar_eventos(request):
     )
     
 
-def exibir_evento(request):
-    evento = {
-        "nome": "Teste",
-        "categoria": "categoria A",
-        "local": "Rio de Janeiro"
-    }
+def exibir_evento(request, id):
+    evento = get_object_or_404(Evento, id=id)
+    evento = Evento.objects.get(id=id) #Get() vai tentar buscar apenas um elemento
     # template = loader.get_template("agenda/exibir_eventos.html")
     # rendered_template = template.render(context={"evento": evento}, request=request)
     # return HttpResponse(rendered_template)
-    return render(request=request, context={"evento": evento}, template_name="agenda/exibir_eventos.html")
+    return render(
+        request=request, 
+        context={"evento": evento}, 
+        template_name="agenda/exibir_eventos.html"
+    )
