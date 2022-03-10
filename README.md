@@ -802,7 +802,29 @@ datetime.date(2022, 3, 9)
 Outro evento
 Aula de React
 ````
+Adicionando uma rota eventos, consultando por id:
+````
+urlpatterns = [
+    path("", listar_eventos),
+    path("eventos/<int:id>/", exibir_evento)
+]
+````
+Adionando a biblioteca para o tratamento do erro 404:
+````
+from django.shortcuts import render, get_object_or_404
+````
 
+Implementando o metódo da rota exibir eventos:
+````
+def exibir_evento(request, id):
+    evento = get_object_or_404(Evento, id=id)
+    evento = Evento.objects.get(id=id) #Get() vai tentar buscar apenas um elemento
+    return render(
+        request=request, 
+        context={"evento": evento}, 
+        template_name="agenda/exibir_eventos.html"
+    )
+````
 
 
 
