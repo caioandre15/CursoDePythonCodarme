@@ -35,7 +35,7 @@
                             a definir.
                         {% endif %}
                     </td>
-                    <td><a href="/eventos/{{ evento.id }}/">Ver detalhes</a></td>
+                    <td><a href="{% url 'exibir_evento' evento.id %}">Ver detalhes</a></td>
                 </tr>
             {% endfor %}
         </tbody>
