@@ -850,6 +850,10 @@ def participar_evento(request):
     evento.save()
     
     return HttpResponseRedirect(f"/eventos/{evento.id}/")
+    
+    Outra forma de redirecionamento com o reverse:
+    from django.urls import reverse
+    return HttpResponseRedirect(reverse('exibir_evento', args=(evento_id,)))
 ````
 
 
