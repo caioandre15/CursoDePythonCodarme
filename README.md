@@ -826,6 +826,19 @@ def exibir_evento(request, id):
     )
 ````
 
+Adcionando um nome para a view:
+````
+urlpatterns = [
+    path("", listar_eventos, name="listar_eventos"),
+    path("eventos/<int:id>/", exibir_evento, name="exibir_evento")
+]
+````
+
+Exemplo de utilização em um template django:
+````
+<td><a href="{% url 'exibir_evento' evento.id %}">Ver detalhes</a></td>
+````
+
 
 
 
