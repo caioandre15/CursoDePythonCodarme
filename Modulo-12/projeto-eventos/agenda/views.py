@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
+from datetime import date
 
 from agenda.models import Evento
 
@@ -8,8 +9,8 @@ from agenda.models import Evento
 
 def listar_eventos(request):
     # Buscar os nossos eventos criados no banco
-    # Exibir um template listando esses eventos
-    eventos = Evento.objects.all()
+    eventos = Evento.objects.filter(data__gte=date.today()).order_by('data')
+    # Exibir um template listando esses eventos    
     return render(
         request=request, 
         context={"eventos": eventos}, 
