@@ -774,6 +774,36 @@ Iterando os objetos no Django Template html:
 {% endfor %}
 ````
 
+Abrindo o Python shell para implentar a solução:
+````
+(InteractiveConsole)
+>>> from agenda.models import Evento
+>>> Evento.objects.all()
+<QuerySet [<Evento: Aula de APIS <1>>, <Evento: Outro evento <2>>, <Evento: Aula de React <3>>, <Evento: Aula de PHP <4>>]>
+>>> evs = Evento.objects.all()
+>>> for ev in evs: print(ev.nome)
+... 
+Aula de APIS 
+Outro evento 
+Aula de React
+Aula de PHP  
+>>> evs_futuros = Eventos.objects.filter(data__gte=data_de_hoje)
+Traceback (most recent call last):      
+  File "<console>", line 1, in <module> 
+NameError: name 'Eventos' is not defined
+>>> from datetime import date
+>>> date.today()   
+datetime.date(2022, 3, 9)
+>>> evs_futuros = Evento.objects.filter(data__gte=date.today())  
+>>> evs_futuros
+<QuerySet [<Evento: Outro evento <2>>, <Evento: Aula de React <3>>]>
+>>> for ev in evs_futuros:print(ev.nome)
+... 
+Outro evento
+Aula de React
+````
+
+
 
 
 
