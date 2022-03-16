@@ -860,6 +860,13 @@ def participar_evento(request):
 
 Adicionar testes há um projeto é escrever um script de validação dos possiveis casos em que os valores das váriaveis podem entrar.
 
+Para criar testes com Unittest:
+1) Importar a biblioteca unitest.
+2) Criar uma classe que herde de unittest.TestCase
+3) Cada teste será uma função da classe
+4) Método assertEquals compara se o resultado da sua função é igual o resultado esperado
+5) Para executar o teste utilizamos o comando unittest.main()
+
 
 
 
