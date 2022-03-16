@@ -856,6 +856,7 @@ def participar_evento(request):
     return HttpResponseRedirect(reverse('exibir_evento', args=(evento_id,)))
 ````
 
+### Módulo 13 - Escrevendo Testes Automatizados
 
 
 
