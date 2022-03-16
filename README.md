@@ -858,6 +858,8 @@ def participar_evento(request):
 
 ### Módulo 13 - Escrevendo Testes Automatizados
 
+Adicionar testes há um projeto é escrever um script de validação dos possiveis casos em que os valores das váriaveis podem entrar.
+
 
 
 
