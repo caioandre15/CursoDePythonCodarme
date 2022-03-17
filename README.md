@@ -867,6 +867,7 @@ Para criar testes com Unittest:
 4) Método assertEquals compara se o resultado da sua função é igual o resultado esperado
 5) Para executar o teste utilizamos o comando unittest.main()
 
+Teste TDD - Simplesmente é criar os testes antes de desenvolver uma funcionalidade.
 
 
 
