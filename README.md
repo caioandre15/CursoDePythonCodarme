@@ -876,8 +876,11 @@ Biblioteca datetime:
 Como importar:
 ````
 from datetime import date, datetime
+
+
 ````
 
+Documentação de Time e TimeDelta: https://docs.python.org/pt-br/3/library/datetime.html#examples-of-usage-timedelta
 
 
 
