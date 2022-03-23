@@ -869,6 +869,8 @@ Para criar testes com Unittest:
 
 Teste TDD - Simplesmente é criar os testes antes de desenvolver uma funcionalidade.
 
+Link interessante sobre assert: https://docs.python.org/pt-br/3/library/unittest.html#unittest.TestCase.assertEqual
+
 
 
 
