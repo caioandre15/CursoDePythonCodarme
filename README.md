@@ -871,6 +871,13 @@ Teste TDD - Simplesmente é criar os testes antes de desenvolver uma funcionalid
 
 Link interessante sobre assert: https://docs.python.org/pt-br/3/library/unittest.html#unittest.TestCase.assertEqual
 
+Biblioteca datetime:
+
+Como importar:
+````
+from datetime import date, datetime
+````
+
 
 
 
