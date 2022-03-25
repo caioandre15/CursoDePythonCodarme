@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class ListaDeTarefas:
     def __init__(self):
         """
@@ -18,6 +21,9 @@ class ListaDeTarefas:
         Retorna lista de tarefas restantes.
         Se incluir_concluidas for passado como True, inclui as tarefas concluídas.
         """
+        if incluir_concluidas:
+            return self._tarefas
+        
         tarefas_nao_concluidas = []
         for tarefa in self._tarefas:
             if not tarefa.concluida:
@@ -28,12 +34,20 @@ class ListaDeTarefas:
     def get_tarefas_atrasadas(self):
         """
         Retorna a lista de tarefas atrasadas. Ver método: Tarefa.atrasada.
-        """
-        pass
+        """        
+        tarefas_atrasadas = []
+        for tarefa in self._tarefas:
+            if tarefa.atrasada() == True:
+                tarefas_atrasadas.append(tarefa)
+        return tarefas_atrasadas
 
     def get_tarefas_para_hoje(self):
         """
         Retorna a lista de tarefas que tenham data = hoje.
         """
-        pass
+        tarefas_para_hoje = []
+        for tarefa in self._tarefas:
+            if tarefa.data_notificacao.strftime("%d/%m/%y") == datetime.now().strftime("%d/%m/%y"):
+                tarefas_para_hoje.append(tarefa)
+        return tarefas_para_hoje
     

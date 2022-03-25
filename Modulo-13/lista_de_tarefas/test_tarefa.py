@@ -29,4 +29,12 @@ class TestAdiarNotificacao(unittest.TestCase):
         tarefa.adiar_notificacao(15)
         dt_esperado = datetime(2022, 2, 10, 9, 25)
         self.assertEqual(tarefa.data_notificacao, dt_esperado)
+
+class TestAtrasada(unittest.TestCase):
+    def test_atrasada(self):
+        dt_notificao = datetime(2022, 5, 10, 9, 10)
+        tarefa = Tarefa("Estudar Python", data_notificacao=dt_notificao)
+        self.assertEqual(tarefa.atrasada(), False)
+
+
 unittest.main()
