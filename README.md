@@ -867,9 +867,18 @@ Para criar testes com Unittest:
 4) Método assertEquals compara se o resultado da sua função é igual o resultado esperado
 5) Para executar o teste utilizamos o comando unittest.main()
 
+Padrão adotado: Uma classe para cada método e cada classse pode conter vários cases de testes.
+
 Teste TDD - Simplesmente é criar os testes antes de desenvolver uma funcionalidade.
 
 Link interessante sobre assert: https://docs.python.org/pt-br/3/library/unittest.html#unittest.TestCase.assertEqual
+
+AssertIn:
+````
+ # assertIn verifica se um elemento está em uma lista.
+ ex:  
+   self.assertIn(tarefa, lista.get_tarefas())
+````
 
 Biblioteca datetime:
 
@@ -877,10 +886,11 @@ Como importar:
 ````
 from datetime import date, datetime
 
-
 ````
 
 Documentação de Time e TimeDelta: https://docs.python.org/pt-br/3/library/datetime.html#examples-of-usage-timedelta
+
+
 
 
 
