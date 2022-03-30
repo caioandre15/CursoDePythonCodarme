@@ -890,6 +890,25 @@ from datetime import date, datetime
 
 Documentação de Time e TimeDelta: https://docs.python.org/pt-br/3/library/datetime.html#examples-of-usage-timedelta
 
+### Django Test
+
+Exemplo:
+````
+# Importando biblioteca
+from django.test import TestCase, Client
+    
+    class TestPaginaIncial(TestCase):
+        def test_lista_eventos(self):
+            client = Client()
+            response = client.get("/")
+            self.assertContains(response, "<th>Nome</th>")
+````
+Comando para executar o teste:
+````
+python manage.py test
+````
+
+
 
 
 
