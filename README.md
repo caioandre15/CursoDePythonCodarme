@@ -903,10 +903,13 @@ from django.test import TestCase, Client
             response = client.get("/")
             self.assertContains(response, "<th>Nome</th>")
 ````
+Obs: É obrigatório o nome da classe e do método começarem com "Test" e receber o TestCase.
+
 Comando para executar o teste:
 ````
 python manage.py test
 ````
+
 
 
 
