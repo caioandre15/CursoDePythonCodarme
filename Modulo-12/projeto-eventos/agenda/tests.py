@@ -24,11 +24,18 @@ class TestListagemDeEventos(TestCase):
         evento.data = date.today()
         evento.save()
 
+        evento2 = Evento()
+        evento2.nome = "Aula de Python2"
+        evento2.categoria = categoria
+        evento2.local = "Rio de Janeiro2"
+        evento2.data = date.today()
+        evento2.save()
+
         client = Client()
         response = client.get("/")
-        self.assertContains(response, "Aula de Python")
-        self.assertEqual(response.context["eventos"][0], evento)
-        self.assertEqual(list(response.context["eventos"]), [evento])
+        # self.assertContains(response, "Aula de Python")
+        # self.assertEqual(response.context["eventos"][0], evento)
+        self.assertEqual(list(response.context["eventos"]), [evento, evento2])
 
 
 
