@@ -910,6 +910,19 @@ Comando para executar o teste:
 python manage.py test
 ````
 
+### Módulo 14 - REST API com Django Rest Framework
+
+Criando um projeto:
+````
+(> siguinifica comandos executados no terminal PowerShell)
+1) Criar uma pasta;
+2) Criar um ambiente virtual:
+> python3 -m venv venv
+3) Instalar o Django na versão 4.0.2:
+> pip install Django==4.0.2
+4) 
+````
+
 
 
 
