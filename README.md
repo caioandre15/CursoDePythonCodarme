@@ -972,7 +972,8 @@ serializer = AgendamentoSerializer(obj)
 from django.http import JsonResponse
 - Depois basta retornar o método JsonResponse:
 return JsonResponse(serializer.data)
-
+19) Rodar aplicação:
+> python manage.py runserver
 ````
 
 
