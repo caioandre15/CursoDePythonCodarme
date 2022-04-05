@@ -983,6 +983,11 @@ def agendamento_list(request):
     qs = Agendamento.objects.all()
     serializer = AgendamentoSerializer(qs, many=True)
     return JsonResponse(serializer.data, safe=False) 
+22) Adicionar o decorator api_view para que a api seja consistente e sempre retorne um json:
+- Importar:
+from rest_framework.decorators import api_view
+- Adicionar anotações:
+@api_view(http_method_names=["GET"])
 ````
 
 
