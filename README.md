@@ -926,6 +926,10 @@ Criando um projeto:
 > django-admin startproject tamarcado . # O ponto siginifca criar o projeto na pasta raiz.
 6) Criando um app:
 > django-admin startapp agenda
+7) Definir escopo de rotas da API.
+8) Criar os modelos de dados em model.py.
+9) Criar Migrations:
+> python manage.py makemigrations
 
 ````
 
