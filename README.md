@@ -928,9 +928,11 @@ Criando um projeto:
 > django-admin startapp agenda
 7) Definir escopo de rotas da API.
 8) Criar os modelos de dados em model.py.
-9) Criar Migrations:
+9) Instalar o app criado em INSTALLED_APPS no arquivo settings.py 
+10) Criar Migrations:
 > python manage.py makemigrations
-
+11) Executar as Migrations:
+> python manage.py migrate
 ````
 
 
