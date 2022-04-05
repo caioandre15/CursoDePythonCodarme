@@ -914,7 +914,7 @@ python manage.py test
 
 Criando um projeto:
 ````
-(> siguinifica comandos executados no terminal PowerShell)
+( ">" significa comandos executados no terminal PowerShell)
 1) Criar uma pasta;
 2) Criar um ambiente virtual:
 > python3 -m venv venv
