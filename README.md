@@ -974,6 +974,7 @@ from django.http import JsonResponse
 return JsonResponse(serializer.data)
 19) Rodar aplicação:
 > python manage.py runserver
+20) Criar superUser e adicionar Models em admin.py.
 ````
 
 
