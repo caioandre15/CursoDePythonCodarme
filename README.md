@@ -926,8 +926,59 @@ Criando um projeto:
 > django-admin startproject tamarcado . # O ponto siginifca criar o projeto na pasta raiz.
 6) Criando um app:
 > django-admin startapp agenda
-
+7) Definir escopo de rotas da API.
+8) Criar os modelos de dados em model.py.
+9) Instalar o app criado em INSTALLED_APPS no arquivo settings.py 
+10) Criar Migrations:
+> python manage.py makemigrations
+11) Executar as Migrations:
+> python manage.py migrate
+12) Criar arquivo urls.py no diretório do app.
+13) Incluir urls do app no projeto em "urlpatterns" no arquivo urls.py, importando via include. 
+Ex:
+from django.conf.urls import include
+urlpatterns = [
+    path('api/', include('agenda.url'))
+]
+14) Adicionar rotas em url.py do app:
+Ex:
+from django.urls import path
+urlpatterns = [
+    path('agendamentos/', agendamento_list),
+    path('agendamentos/<int:id>', agendamento_detail),
+]
+* Sempre seguir padrão de nomes para as views (list e detail)
+15) Criar views:
+- importar models e "get_object_or_404" para tratamento de erros.
+- importar view no arquivo url.py.
+Ex:
+def agendamento_detail(request, id):
+    obj = get_object_or_404(Agendamento, id=id)
+16) Serializar dados:
+- Criar um arquivo "serializers.py"
+- Importar serializers de rest_framework 
+from rest_framework import serializers
+- Criar uma classe herdando de Serializer, mapeando os campos:
+Ex:
+class AgendamentoSerializer(serializers.Serializer):
+    data_horario = serializers.DateTimeField()
+    nome_cliente = serializers.CharField(max_length=200)
+17) Adicionar o objeto serializer na view agendamento_detail:
+- Recebe o construtor que consegue realizar o de para de campos, pois são os mesmos nomes criados em models.
+Ex:
+serializer = AgendamentoSerializer(obj)
+18) Para retornar os dados serializados no formato JSON:
+- Importar bibioteca JsonResponse:
+from django.http import JsonResponse
+- Depois basta retornar o método JsonResponse:
+return JsonResponse(serializer.data)
+19) Rodar aplicação:
+> python manage.py runserver
+20) Criar superUser e adicionar Models em admin.py.
 ````
+
+
+
 
 
 
