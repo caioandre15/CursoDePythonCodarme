@@ -933,7 +933,24 @@ Criando um projeto:
 > python manage.py makemigrations
 11) Executar as Migrations:
 > python manage.py migrate
+12) Criar arquivo urls.py no diretório do app.
+13) Incluir urls do app no projeto em "urlpatterns" no arquivo urls.py, importando via include. 
+Ex:
+from django.conf.urls import include
+urlpatterns = [
+    path('api/', include('agenda.url'))
+]
+14) Adicionar rotas em url.py do app:
+Ex:
+from django.urls import path
+urlpatterns = [
+    path('agendamentos/', agendamento_list),
+    path('agendamentos/<int:id>', agendamento_detail),
+]
+* Sempre seguir padrão de nomes para as views (list e detail)
+15)
 ````
+
 
 
 
