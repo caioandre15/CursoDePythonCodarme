@@ -977,12 +977,12 @@ return JsonResponse(serializer.data)
 20) Criar superUser e adicionar Models em admin.py.
 21) Criar view agendamento_list:
 - qs (query settings)
-- Utilizando o Serializer podemos realizar serializar um objeto interavel passando o parâmetro many=true:
+- Utilizando o Serializer podemos realizar serializar um objeto interavel passando o parâmetro many=true e safe=False:
 Ex:
 def agendamento_list(request):
     qs = Agendamento.objects.all()
     serializer = AgendamentoSerializer(qs, many=True)
-    return JsonResponse(serializer.data) 
+    return JsonResponse(serializer.data, safe=False) 
 ````
 
 
