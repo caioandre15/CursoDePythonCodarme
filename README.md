@@ -918,9 +918,15 @@ Criando um projeto:
 1) Criar uma pasta;
 2) Criar um ambiente virtual:
 > python3 -m venv venv
-3) Instalar o Django na versão 4.0.2:
+3) Instalar o Framework Django na versão 4.0.2:
 > pip install Django==4.0.2
-4) 
+4) Instalar a bilioteca DjangoRest
+> pip install djangorestframework
+5) Criar o projeto:
+> django-admin startproject tamarcado . # O ponto siginifca criar o projeto na pasta raiz.
+6) Criando um app:
+> django-admin startapp agenda
+
 ````
 
 
