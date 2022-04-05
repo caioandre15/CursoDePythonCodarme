@@ -948,8 +948,25 @@ urlpatterns = [
     path('agendamentos/<int:id>', agendamento_detail),
 ]
 * Sempre seguir padrão de nomes para as views (list e detail)
-15)
+15) Criar views:
+- importar models e "get_object_or_404" para tratamento de erros.
+- importar view no arquivo url.py.
+Ex:
+def agendamento_detail(request, id):
+    obj = get_object_or_404(Agendamento, id=id)
+16) Serializar dados:
+- Criar um arquivo "serializers.py"
+- Importar serializers de rest_framework 
+from rest_framework import serializers
+- Criar uma classe herdando de Serializer, mapeando os campos:
+Ex:
+class AgendamentoSerializer(serializers.Serializer):
+    data_horario = serializers.DateTimeField()
+    nome_cliente = serializers.CharField(max_length=200)
+17)
 ````
+
+
 
 
 
