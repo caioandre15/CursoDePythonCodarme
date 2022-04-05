@@ -988,6 +988,23 @@ def agendamento_list(request):
 from rest_framework.decorators import api_view
 - Adicionar anotações:
 @api_view(http_method_names=["GET"])
+23) Criando um Post com Serializer:
+- data = request.data # adiciona os dados da requisição
+- serializer = AgendamentoSerializer(data=data) # realiza a comparação dos dados
+- if serializer.is_valid(): # Faz a validação dos dados comparando a model com serializer validando os tipos dos campos e tamanhos.
+- validated_data = serializer.validated_data # caso a resição seja valida adiciona os dados.
+- Cria um regitro na base:
+Agendamento.objects.create(
+    data_horario=validated_data["data_horario"],
+    nome_cliente=validated_data["nome_cliente"],
+    email_cliente=validated_data["email_cliente"]
+    telefone_cliente=validated_data["telefone_cliente"]
+)
+- Retorna um json do objeto criado com status 201:
+return JsonResponse(serializer.data, status=201)
+- Caso serializer.is_valid() for igual false retorna um json com erros e com status 400:
+return JsonResponse(serializer.errors, status=400)
+
 ````
 
 
