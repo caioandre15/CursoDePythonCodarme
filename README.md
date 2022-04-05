@@ -963,7 +963,16 @@ Ex:
 class AgendamentoSerializer(serializers.Serializer):
     data_horario = serializers.DateTimeField()
     nome_cliente = serializers.CharField(max_length=200)
-17)
+17) Adicionar o objeto serializer na view agendamento_detail:
+- Recebe o construtor que consegue realizar o de para de campos, pois são os mesmos nomes criados em models.
+Ex:
+serializer = AgendamentoSerializer(obj)
+18) Para retornar os dados serializados no formato JSON:
+- Importar bibioteca JsonResponse:
+from django.http import JsonResponse
+- Depois basta retornar o método JsonResponse:
+return JsonResponse(serializer.data)
+
 ````
 
 
