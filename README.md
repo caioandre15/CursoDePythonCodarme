@@ -988,6 +988,7 @@ def agendamento_list(request):
 from rest_framework.decorators import api_view
 - Adicionar anotações:
 @api_view(http_method_names=["GET"])
+
 23) Criando um Post com Serializer:
 - data = request.data # adiciona os dados da requisição
 - serializer = AgendamentoSerializer(data=data) # realiza a comparação dos dados
@@ -1005,7 +1006,27 @@ return JsonResponse(serializer.data, status=201)
 - Caso serializer.is_valid() for igual false retorna um json com erros e com status 400:
 return JsonResponse(serializer.errors, status=400)
 
+24) Criando um Put:
+- Busca o id passado na requisição na base
+- Valida os dados passados na request utilizando serializer
+- Caso seja valido adiciona o valor em cada campo utilizando o método get
+- Salva o objeto
+- Retornar o status 200 os dados atualizados ou status 400 com os erros 
+if request.method == "PUT":
+        obj = get_object_or_404(Agendamento, id=id)
+        serializer = AgendamentoSerializer(data=request.data)
+        if serializer.is_valid():
+            validated_date = serializer.validated_data
+            obj.data_horario = validated_date.get("data_horario", obj.data_horario)
+            obj.nome_cliente = validated_date.get("nome_cliente", obj.nome_cliente)
+            obj.email_cliente = validated_date.get("email_cliente", obj.email_cliente)
+            obj.telefone_cliente = validated_date.get("telefone_cliente", obj.telefone_cliente)
+            obj.save()
+            return JsonResponse(serializer.data, status=200)
+        return JsonResponse(serializer.errors, status=400)
+
 ````
+  
 
 
 
