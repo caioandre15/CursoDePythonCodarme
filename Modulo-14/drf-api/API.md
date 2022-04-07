@@ -22,6 +22,7 @@ Criar agendamento: POST /agendamentos/
 
 Excluir agendamentos: DELETE /agendamentos/<id>/
 
-Editar um agendamento: PUT/PATH /agendamentos/<id>/
+Editar um agendamento: PUT /agendamentos/<id>/
 
+Editar um agendamento parcialmente: PATH /agendamentos/<id>/
 
