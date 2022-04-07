@@ -1046,7 +1046,19 @@ if request.method == "PATCH":
             return JsonResponse(validated_date, status=200)
         return JsonResponse(serializer.errors, status=400)
 
+27) Criando Delete:
+- Importar: from rest_framework.response import Response
+Utilizado para retornar o body vazio com o status=204 que significa "No Content".
+- Busca o id passado na requisição na base
+- Deletar objeto
+- Retornar status=204
+
+if request.method == "DELETE":
+        obj = get_object_or_404(Agendamento, id=id)
+        obj.delete()
+        return Response(status=204)
 ````
+
   
 
 
