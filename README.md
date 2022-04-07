@@ -1025,6 +1025,27 @@ if request.method == "PUT":
             return JsonResponse(serializer.data, status=200)
         return JsonResponse(serializer.errors, status=400)
 
+25) Obrigatoriedade de campos na requisição: 
+Parâmetro required=false é utilizado para retirar a obrigatoriedade de preenchimento do campo.
+É importante destacar que ao retirar a obrigariedade diretamente no serializer pode causar erros nas rotas existentes.
+Por isso devemos utilizar o parâmetro partial=True que é utilizado em uma instância do serializer, ficando apenas no escopo da rota.
+Também importante que o JSONResponse retorne os dados validados e não o serializer.data, se não ocorrerá um erro de validação.
+
+26) Criando um Patch:
+- Seguir o mesmos passos do item 24 adicionado o partial=True e o validated_date no JSONResponse.
+if request.method == "PATCH":
+        obj = get_object_or_404(Agendamento, id=id)
+        serializer = AgendamentoSerializer(data=request.data, partial=True)
+        if serializer.is_valid():
+            validated_date = serializer.validated_data
+            obj.data_horario = validated_date.get("data_horario", obj.data_horario)
+            obj.nome_cliente = validated_date.get("nome_cliente", obj.nome_cliente)
+            obj.email_cliente = validated_date.get("email_cliente", obj.email_cliente)
+            obj.telefone_cliente = validated_date.get("telefone_cliente", obj.telefone_cliente)
+            obj.save()
+            return JsonResponse(validated_date, status=200)
+        return JsonResponse(serializer.errors, status=400)
+
 ````
   
 
