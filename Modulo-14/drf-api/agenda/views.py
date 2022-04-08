@@ -1,23 +1,24 @@
 import email
+from functools import partial
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 
 from agenda.models import Agendamento
 from agenda.serializers import AgendamentoSerializer
-
+from rest_framework.response import Response
 # Create your views here.
 
 
-@api_view(http_method_names=["GET", "PUT"])
+@api_view(http_method_names=["GET", "PATCH", "DELETE"])
 def agendamento_detail(request, id):
     if request.method == "GET":
         obj = get_object_or_404(Agendamento, id=id)
         serializer = AgendamentoSerializer(obj)
         return JsonResponse(serializer.data)
-    if request.method == "PUT":
+    if request.method == "PATCH":
         obj = get_object_or_404(Agendamento, id=id)
-        serializer = AgendamentoSerializer(data=request.data)
+        serializer = AgendamentoSerializer(data=request.data, partial=True)
         if serializer.is_valid():
             validated_date = serializer.validated_data
             obj.data_horario = validated_date.get("data_horario", obj.data_horario)
@@ -25,8 +26,12 @@ def agendamento_detail(request, id):
             obj.email_cliente = validated_date.get("email_cliente", obj.email_cliente)
             obj.telefone_cliente = validated_date.get("telefone_cliente", obj.telefone_cliente)
             obj.save()
-            return JsonResponse(serializer.data, status=200)
+            return JsonResponse(validated_date, status=200)
         return JsonResponse(serializer.errors, status=400)
+    if request.method == "DELETE":
+        obj = get_object_or_404(Agendamento, id=id)
+        obj.delete()
+        return Response(status=204)
 
 
 @api_view(http_method_names=["GET", "POST"])
