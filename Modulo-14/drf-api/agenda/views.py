@@ -1,5 +1,3 @@
-import email
-from functools import partial
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
@@ -25,19 +23,21 @@ def agendamento_detail(request, id):
             obj.nome_cliente = validated_date.get("nome_cliente", obj.nome_cliente)
             obj.email_cliente = validated_date.get("email_cliente", obj.email_cliente)
             obj.telefone_cliente = validated_date.get("telefone_cliente", obj.telefone_cliente)
+            # obj.cancelado = validated_date.get("cancelado", obj.cancelado)
             obj.save()
             return JsonResponse(validated_date, status=200)
         return JsonResponse(serializer.errors, status=400)
     if request.method == "DELETE":
         obj = get_object_or_404(Agendamento, id=id)
-        obj.delete()
+        obj.cancelado = True
+        # obj.delete()
         return Response(status=204)
 
 
 @api_view(http_method_names=["GET", "POST"])
 def agendamento_list(request):
     if request.method == "GET":
-        qs = Agendamento.objects.all()
+        qs = Agendamento.objects.filter(cancelado=False)
         serializer = AgendamentoSerializer(qs, many=True)
         return JsonResponse(serializer.data, safe=False)
     if request.method == "POST":

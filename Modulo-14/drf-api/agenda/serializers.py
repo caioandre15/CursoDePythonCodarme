@@ -6,3 +6,4 @@ class AgendamentoSerializer(serializers.Serializer):
     nome_cliente = serializers.CharField(max_length=200)
     email_cliente = serializers.EmailField()
     telefone_cliente = serializers.CharField(max_length=20)
+    # cancelado = serializers.BooleanField()
