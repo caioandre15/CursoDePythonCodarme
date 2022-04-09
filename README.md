@@ -1057,6 +1057,33 @@ if request.method == "DELETE":
         obj = get_object_or_404(Agendamento, id=id)
         obj.delete()
         return Response(status=204)
+
+28) Refatorar (Create e Update)
+Podemos utilizar o serializer para criar os métodos create e update
+Ficando apenas o método serializer.save() na view
+
+def create(self, validated_data):
+        agendamento = Agendamento.instanceects.create(
+            data_horario=validated_data["data_horario"],
+            nome_cliente=validated_data["nome_cliente"],
+            email_cliente=validated_data["email_cliente"],
+            telefone_cliente=validated_data["telefone_cliente"]
+        )
+        return agendamento
+
+def update(self, instance, validated_data):
+        instance.data_horario = validated_data.get(
+            "data_horario", instance.data_horario)
+        instance.nome_cliente = validated_data.get(
+            "nome_cliente", instance.nome_cliente)
+        instance.email_cliente = validated_data.get(
+            "email_cliente", instance.email_cliente)
+        instance.telefone_cliente = validated_data.get(
+            "telefone_cliente", instance.telefone_cliente)
+        # instance.cancelado = validated_data.get("cancelado", instance.cancelado)
+        instance.save()
+        return instance
+
 ````
 
   
