@@ -1100,7 +1100,7 @@ def validate(self, attrs):
         telefone_cliente = attrs.get("telefone_cliente", "")
         email_cliente = attrs.get("email_cliente", "")
 
-        if email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.starstswith("+55"):
+        if email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.startswith("+55"):
             raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)")
         return attrs
 
