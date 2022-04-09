@@ -1084,6 +1084,26 @@ def update(self, instance, validated_data):
         instance.save()
         return instance
 
+29) Adicionando validação em um campo no serializer:
+- Devemos colocar "validate_" mais o nome do cmapo;
+- No caso do método timezone demos utilizar o método timezone
+da bibliotexa django.utils import timezone;
+from django.utils import timezone
+def validate_data_horario(self, value):
+        if value < timezone.now():
+            raise serializers.ValidationError("Agendamento não pode ser feito no passado!")
+        return value
+
+30) Sobrescrevendo o método validated do serializer
+para criar uma validação geral para todos os campos
+def validate(self, attrs):
+        telefone_cliente = attrs.get("telefone_cliente", "")
+        email_cliente = attrs.get("email_cliente", "")
+
+        if email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.starstswith("+55"):
+            raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)")
+        return attrs
+
 ````
 
   
